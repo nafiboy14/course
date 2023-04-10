@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.conteiner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conteiner .pageRegister{
+    width: 70%;
+    height:80vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.conteiner .pageRegister .pageInput{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 70%;
+    border: 1px solid white;
+    height:80px ;
+    gap: 20px;
+}
+.conteiner .pageRegister .pageInput label{
+ font-size: 1.2em;
+ font-weight: 600;
+ color: #0cf02a;
+}
+.conteiner .pageRegister .pageInput input{
+ font-size: 1.2em;
+   width: 70%;
+   list-style-type: none;
+   height:40px;
+   border-radius: 10px;
+   border: 1px solid #000;
+   background: transparent;
+}
+.conteiner .pageRegister .pageInput ::placeholder{
+ font-size: 1em;
+  font-weight: 300;
+color: #0f3522;
+}
+.conteiner .pageRegister button{
+    width: 190px;
+    height: 40px;
+    border-radius: 10px;
+    background: #1de2e2;
+    transition: all 0.5s;
+}
+
+@media only screen and (max-width:1100px){
+    .conteiner .pageRegister{
+        width: 90%;
+        height:80vh ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .conteiner .pageRegister .pageInput{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 90%;
+        border: 1px solid white;
+        height:80px ;
+        gap: 20px;
+    }
+}

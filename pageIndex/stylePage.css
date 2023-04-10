@@ -1,0 +1,359 @@
+*{
+    margin:0px; 
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: poppins,sans-serif;
+
+}
+body{
+    scroll-behavior: smooth;
+}
+li,a{
+    text-decoration: none;
+    list-style-type:none;
+}
+nav{
+    width: 100vw;
+    box-shadow:  0px 5px 10px #b3aeae;
+background: none;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr  0.2fr;
+    grid-template-rows: 80px;
+    top: 0;
+    position:fixed;
+    backdrop-filter: blur(7px);
+}
+
+.logo{
+     color: linear-gradient(181.05deg, #17ACAC 0.9%, #000000 294.55%);
+    ;
+    font-size: 1.5em;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 8%;
+
+}
+.menu li{
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+}
+.menu li a{
+   font-size: 1.2em;
+   font-weight: 600;
+   transition: all 1s;
+}
+.menu li a:hover{
+   font-size: 1em;
+   font-weight: 600;
+   transition: all 1s;
+}
+.buttonLoginAndRegis{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    gap: 5%;
+    padding: 2px;
+}
+.buttonLoginAndRegis button{
+    width: 130px;
+    height: 40px;
+    border-radius: 8px;
+    background: #12dbdb;
+    box-shadow:  1px 10px 20px #08515e;
+}
+.buttonLoginAndRegis button:hover{
+    width: 130px;
+    height: 40px;
+    border-radius: 8px;
+    background: #12dbdb;
+     opacity: 0.6;
+     transition: all 0.5s;
+}
+
+.cartshopping{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 100%;
+}
+.cartshopping .carticon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    width: 100px; height: 70px;
+    margin-bottom: 20px;
+    position: absolute;
+    right: 10;
+}
+.cartshopping .burgerMenu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  width: 40px; height: 40px;
+  gap: 5px;
+}
+.cartshopping .burgerMenu span{
+    background: #000;
+    width: 90%;
+    height: 4px;
+}
+.zeropage{
+    width: 100%;
+    height: 80vh;
+    margin-top: 85px;
+    background-image: url(https://images.unsplash.com/photo-1462826303086-329426d1aef5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+.zeropage .container{
+    width: 100%;
+    height: 80vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.zeropage .container .search{
+    width: 70%;
+    height: 70px;
+    display:flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.zeropage .container .search input::placeholder{
+    font-size: 1em;
+    margin: 100px;
+}
+.zeropage .container .search input{
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+    background: none;
+    border: 1px solid rgb(17, 11, 11);
+    margin: 10px;
+    font-size: 1.5em;
+}
+.zeropage .container .description{
+    color: #0ac7c7;
+    width: 60%;
+    max-width: 40%;
+    text-align: center;
+}
+.zeropage .container .description p{
+    color: #007E7E;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+.zeropage .container .visitpage{
+    width:auto;
+    height: 60px;
+    display:flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.zeropage .container .visitpage button:hover{
+    background: #12dbdb;
+     opacity: 0.6;
+     transition: all 0.5s;
+}
+.zeropage .container .visitpage button{
+    width: 190px;
+    height: 40px;
+    border-radius: 10px;
+    background: #1de2e2;
+    transition: all 0.5s;
+
+}
+.sponsor{
+    width: 100%;
+    height: 20vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.sponsorbox{
+    width: 80%;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80%;
+    grid-gap: 20px;
+
+}
+.sponsorbox .content{
+    padding: 10px;
+}
+.sponsorbox .content .img{
+    width: 99% ;
+    height: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sponsorbox .content img{
+    width: 99% ;
+    height: 50%;
+    object-fit: contain;
+}
+
+@media only screen and (max-width:1100px){
+    .menu{
+        background: #5555;
+        display: flex;
+        justify-content: center;
+        height: 70vh;
+        width: 60%;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        margin-right: auto;
+        box-shadow:  1px 10px 20px #1b1a1a;
+        transition: all 2s ;
+        transform: translateX(96%);
+        backdrop-filter: blur(7px);
+    }
+    .menuactive{
+        transition: all 2s ;
+        transform: translateX(0%);
+        backdrop-filter: blur(7px);
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+        position: absolute;
+
+    
+    }
+    .menu li a{
+        margin: 20px;
+        display: flex;
+        justify-content:center;
+        align-items: center; 
+        color: #fff;
+    }
+    .buttonLoginAndRegis{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        height: 100%;
+        width:55vw;
+        background: #000;
+      
+    }
+    .buttonLoginAndRegis button{
+        width: 25vw;
+        height: 45px;
+        border-radius: 8px;
+        background: #12dbdb;
+        box-shadow:  1px 10px 20px #08515e;
+    }
+    .cartshopping{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 100%;
+        gap: 20px;
+       
+    }
+    .cartshopping .carticon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;  
+        width: 100px; height: 70px;
+        margin-bottom: 20px;
+
+        position: relative;
+    }
+    .cartshopping .burgerMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;  
+        width: 40px; height: 40px;
+        gap: 5px;
+        position: relative;
+      }
+      nav{
+        width: 100vw;
+        box-shadow:  0px 5px 10px #b3aeae;
+        background: rgba(255, 255, 255, 0.9);
+        height: 100px;
+        display: grid;
+        grid-template-columns: 1fr 0.4fr;
+        grid-template-rows: 80px;
+        top: 0;
+        position:fixed;
+    }
+    .logo{
+        color: linear-gradient(181.05deg, #17ACAC 0.9%, #000000 294.55%);
+       ;
+       height: 100%;
+       display: flex;
+       justify-content: start;
+       align-items: center;
+
+   }
+   .logo p{
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+   }
+   .zeropage .container .search{
+    width: 90%;
+    height: 70px;
+    display:flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.zeropage .container .search input::placeholder{
+    font-size: 0.9em;
+    margin: 100px;
+}
+.zeropage .container .search input{
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    background: none;
+    border: 1px solid rgb(17, 11, 11);
+    margin: 10px;
+}
+   .sponsorbox{
+    width: 80%;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80%;
+    grid-gap: 5px;
+
+}
+    
+}
