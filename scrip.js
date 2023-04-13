@@ -12,6 +12,8 @@ let email = document.getElementById('email')
 let password = document.getElementById('password')
 let register = document.getElementById('register')
 let loginPage= "/loginpage/login.html"
+
+
 function submit(){
     localStorage.setItem("nameUser", name.value)
     localStorage.setItem("emailUser", email.value)
