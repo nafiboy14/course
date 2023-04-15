@@ -7,39 +7,82 @@ toggle.addEventListener('click', function () {
 
 })
 
-let name = document.getElementById('name')
-let email = document.getElementById('email')
-let password = document.getElementById('password')
+let name = document.getElementById('nameRegister')
+let email = document.getElementById('emailRegister')
+let password = document.getElementById('passwordRegister')
 let register = document.getElementById('register')
-let loginPage= "/loginpage/login.html"
+let warning = document.getElementById('warning')
+let warningErr = document.getElementById('warningErr')
+let loginPage = "/loginpage/login.html"
 
+function submit() {
 
-function submit(){
-    localStorage.setItem("nameUser", name.value)
-    localStorage.setItem("emailUser", email.value)
-    localStorage.setItem("passwordUser", password.value)
-
-    if(name.value==""){
-        console.log('plis input your name')
-        
-    }
-    if(email.value=="" && ! email){
-        console.log('plis input your email')
-
-    }
-    if(name.value==""){
-        console.log('plis input your name')
+    localStorage.setItem("emailvalue",emailRegister.value)
+    localStorage.setItem("passwordvalue",passwordRegister.value)
+ 
+    if (name.value == "") {
+       warning.innerHTML="plis input your name"
+       warning.style.color="red";
+       focus;
+        return false;
 
     }
-    if(password.value==""){
-        console.log('plis input your password')
+    if (email.value == "") {
+        warning.innerHTML="plis input your email"
+        warning.style.color="red";
+        focus;
+        return false;
 
     }
-    if(password.value.length <= 8){
-        console.log('minimal passsword 8 carakter')
 
+    
+    if (password.value == "") {
+        warning.innerHTML="plis input your password"
+        warning.style.color="red";
+        focus;
+        return false;
+
+
+    }
+    if (password.value.length <= 8) {
+        warning.innerHTML="minimal password is 8 carakter"
+        warning.style.color="red";
+        focus;
+        return false;
+
+    }
+    else {
+        window.location = loginPage;
+        alert(pas)
+
+       
+    }
+}
+
+
+
+let nameLOgin = document.getElementById('nameLogin')
+let emailLogin = document.getElementById('emailLOgin')
+let passwordLogin = document.getElementById('passwordLogin')
+let LoginButton = document.getElementById('LoginButton')
+
+function Login() {
+ let emailcek =  localStorage.getItem("emailvalue")
+   let pascek = localStorage.getItem("passwordvalue")
+    if (emailLogin.value!=emailcek) {
+        alert('login tidak sukses')
+        console.log(emailLogin)
+        console.log(passwordLogin)
+        focus;
+       return false;
+    }
+    if (passwordLogin.value!=pascek) {
+        alert('login tak sukses')
+
+        focus;
+        return false;
     }
     else{
-        window.location=loginPage;
+        alert('login sukses')
     }
 }

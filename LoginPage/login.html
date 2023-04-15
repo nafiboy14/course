@@ -14,10 +14,10 @@
      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
      <!-- ========- -->
      <!-- css -->
-         <link rel="stylesheet" href="register.css">\
+         <link rel="stylesheet" href="login.css">\
          <link rel="stylesheet" href="/pageIndex/stylePage.css">\
       <!-- ======= -->
-    <title>register </title>
+    <title>LoginPage </title>
 </head>
 <body>
 
@@ -37,7 +37,7 @@
 
                 <div class="buttonLoginAndRegis">
                     <button id="Login">Login</button>
-                    <a target="_blank" href="/registerPage/register.html"> <button id="register"> Register</button></a>
+                    <a target="_blank" href="register.html"> <button id="register"> Register</button></a>
 
                 </div>
             </ul>
@@ -61,24 +61,27 @@
 
     </nav>
     <!-- ============== -->
-
-    <div class="conteiner">
-        <div class="pageRegister">
+ 
     
-            </div>
-            <div class="pageInput">
+    <div class="conteiner">
+
+        <div class="pageLogin">
+          
+            <div class="pageInputLOgin">
                 
             <label for="name"> email:</label>
-            <input type="email" id="email" placeholder="email">
+            <input type="email" id="emailLOgin" placeholder="email">
             
             </div>
-            <div class="pageInput">
+            <div class="pageInputLOgin">
                 <label for="password"> password:</label>
-                <input type="password" id="password" placeholder="password">
+                <input type="password" id="passwordLogin" placeholder="password">
                
             </div>
 
-<button id="register" onclick="submit()" ><p>Submit</p></button>
+            <button id="LoginButton" onclick="Login()">
+                <p>Submit</p>
+            </button>
            
         </div>
     </div>

@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- google font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
-     <!-- ========= -->
-     
-     <!-- script lottie -->
-     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-     <!-- ========- -->
-     <!-- css -->
-         <link rel="stylesheet" href="register.css">\
-         <link rel="stylesheet" href="/pageIndex/stylePage.css">\
-      <!-- ======= -->
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Italianno&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <!-- ========= -->
+
+    <!-- script lottie -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- ========- -->
+    <!-- css -->
+    <link rel="stylesheet" href="register.css">\
+    <link rel="stylesheet" href="/pageIndex/stylePage.css">\
+    <!-- ======= -->
     <title>register </title>
 </head>
+
 <body>
 
-      <!-- navbar -->
-      <nav>
+    <!-- navbar -->
+    <nav>
         <div class="logo">
             <p>Coursemania</p>
         </div>
@@ -61,28 +65,36 @@
 
     </nav>
     <!-- ============== -->
+    <div id="warning"> 
+        <div id="warningErr"><p> </p></div>
 
+    </div>
     <div class="conteiner">
         <div class="pageRegister">
-            <div class="pageInput">
+
+            <div class="pageInputREgister">
                 <label for="name"> name:</label>
-                <input type="text" id="name" placeholder="Nama Lengkap">
-    
+                <input type="text" id="nameRegister" placeholder="Nama Lengkap">
             </div>
-            <div class="pageInput">
-                
-            <label for="name"> email:</label>
-            <input type="email" id="email" placeholder="email">
             
-            </div>
-            <div class="pageInput">
-                <label for="password"> password:</label>
-                <input type="password" id="password" placeholder="password">
-               
+            <div class="pageInputREgister">
+
+                <label for="name"> email:</label>
+                <input type="email" id="emailRegister" placeholder="email">
+
             </div>
 
-<button id="register" onclick="submit()" ><p>Submit</p></button>
-           
+            <div class="pageInputREgister">
+                <label for="password"> password:</label>
+                <input type="password" id="passwordRegister" placeholder="password">
+            
+
+            </div>
+
+            <button id="register" onclick="submit()">
+                <p>Submit</p>
+            </button>
+
         </div>
     </div>
 
@@ -92,6 +104,7 @@
     <script src="/scrip.js">
 
     </script>
-    
+
 </body>
+
 </html>
