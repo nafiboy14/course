@@ -13,7 +13,7 @@ let password = document.getElementById('passwordRegister')
 let register = document.getElementById('register')
 let warning = document.getElementById('warning')
 let warningErr = document.getElementById('warningErr')
-let loginPage = "/loginpage/login.html"
+let loginPage = "login.html"
 
 function submit() {
 
