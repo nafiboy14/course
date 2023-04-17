@@ -23,6 +23,7 @@ background: none;
     top: 0;
     position:fixed;
     backdrop-filter: blur(7px);
+    z-index: 100;
 }
 
 .logo{
@@ -194,7 +195,7 @@ ul{
     align-items: center;
 }
 .sponsorbox{
-    width: 80%;
+    width: 90%;
     height: 20vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -207,7 +208,7 @@ ul{
 }
 .sponsorbox .content .img{
     width: 99% ;
-    height: 99%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,10 +218,177 @@ ul{
     height: 50%;
     object-fit: contain;
 }
+.Popularcourses{
+    width: 99%;
+    height: 80vh;
+    background: darkcyan;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.Popularcourses .head{
+    background: #e1b9b9;
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:auto;
+    grid-gap: 2%;
+    /* display: flex;
+    justify-content:space-evenly;
+    align-items:center; */
+}
+.Popularcourses .head h2{
+    font-size: 1.7em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    position: relative;
+    top: 50%;
+}
+.Popularcourses .head .list{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    bottom: 10px;
+    gap: 50px;
+}
+.Popularcourses .head .list a{
+    font-size: 1.2em;
+    color: #178C8C;
+    font-weight: 600;
+}
+.detailprogram{
+    background: #F8F5F5;
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+ 
+}
+.imagesDisplay{
+    width: 330px;
+    height: 490px;
+    background: #F8F8F8;
+    display: flex;
+
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.imagesDisplay .img{
+    width: 100%;
+    background: #000;
+    height:230px;
+    position: relative;
+}
+.starRating svg{
+    width: 27px;
+    height: 27px;
+}
+.imagesDisplay .namecourses{
+ width: 320px;
+ height: 50px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: relative;
+ padding: 4px;
+}
+.imagesDisplay .namecourses .title p{
+   font-size: 1.1em;
+   font-weight: 800;
+}
+.imagesDisplay .namecourses .add{
+width: 40px;
+height: 40px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.imagesDisplay .namecourses .add svg{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    background: #178C8C;
+}
+.imagesDisplay .duration{
+    font-size: 1em;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.imagesDisplay .price{
+    font-size: 1.3em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #e00909;
+}
+.imagesDisplay .starandmerek{
+    display: flex;
+    justify-content:center;
+    align-items: self-start;
+    flex-direction: column;
+    width: 100%;
+    height: 80px;
+    gap: 15px;
+    position: relative;
+
+}
+.imagesDisplay .starandmerek .imgmerek{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagesDisplay .starandmerek .imgmerek img{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: -60px;
+ 
+  object-fit: contain;
+}
+.starRating{
+    display: flex;
+    justify-content:center;
+    align-items: start;
+    gap: 5px;
+}
+
+.imagesDisplay button{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #178C8C;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 1.2em;
+    font-weight:400;
+    color: #fff;
+}
 
 @media only screen and (max-width:1100px){
+    nav{
+        width: 100vw;
+        box-shadow:  0px 5px 10px #b3aeae;
+    background: none;
+        height: 100px;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr  0.2fr;
+        grid-template-rows: 80px;
+        top: 0;
+        position:fixed;
+        backdrop-filter: blur(7px);
+        z-index: 100;
+    }
     .menu{
-        background: #5555;
         display: flex;
         justify-content: center;
         height: 70vh;
@@ -231,12 +399,12 @@ ul{
         right: 0;
         margin-right: auto;
         box-shadow:  1px 10px 20px #1b1a1a;
-        transition: all 2s ;
+        transition: all 1s ;
         transform: translateX(96%);
         backdrop-filter: blur(7px);
     }
     .menuactive{
-        transition: all 2s ;
+        transition: all 1s ;
         transform: translateX(0%);
         backdrop-filter: blur(7px);
     }
@@ -262,7 +430,6 @@ ul{
         align-items: center; 
         height: 100%;
         width:55vw;
-        background: #000;
       
     }
     .buttonLoginAndRegis button{
@@ -270,7 +437,7 @@ ul{
         height: 45px;
         border-radius: 8px;
         background: #12dbdb;
-        box-shadow:  1px 10px 20px #08515e;
+        box-shadow:  0px 10px 20px #08515e;
     }
     .cartshopping{
         display:flex;
@@ -300,7 +467,7 @@ ul{
         gap: 5px;
         position: relative;
       }
-      nav{
+      /* nav{
         width: 100vw;
         box-shadow:  0px 5px 10px #b3aeae;
         background: rgba(255, 255, 255, 0.9);
@@ -310,7 +477,7 @@ ul{
         grid-template-rows: 80px;
         top: 0;
         position:fixed;
-    }
+    } */
     .logo{
         color: linear-gradient(181.05deg, #17ACAC 0.9%, #000000 294.55%);
        ;
@@ -354,6 +521,58 @@ ul{
     grid-template-rows: 80%;
     grid-gap: 5px;
 
+}
+.Popularcourses{
+    width: 100%;
+    height: auto;
+    background: darkcyan;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.Popularcourses .head{
+    background: #e1b9b9;
+    width: 100%;
+    height: auto;
+    display: flex;
+justify-content:center;
+align-items: center;
+flex-direction: column;
+
+}
+.Popularcourses .head .list{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    bottom: 10px;
+    gap: 10px;
+    flex-direction: column;
+}
+.detailprogram{
+    background: #F8F5F5;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    gap: 10px;
+    flex-direction: column;
+    position: relative;
+ 
+}
+.imagesDisplay{
+    width: 80vw;
+    height: 490px;
+    background: #F8F8F8;
+    display: flex;
+    overflow: auto;
+    overflow-y: auto;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
     
 }

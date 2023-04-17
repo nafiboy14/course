@@ -65,24 +65,46 @@ let nameLOgin = document.getElementById('nameLogin')
 let emailLogin = document.getElementById('emailLOgin')
 let passwordLogin = document.getElementById('passwordLogin')
 let LoginButton = document.getElementById('LoginButton')
-
+let loadingProses = document.getElementById('loadingProses')
 function Login() {
  let emailcek =  localStorage.getItem("emailvalue")
    let pascek = localStorage.getItem("passwordvalue")
     if (emailLogin.value!=emailcek) {
-        alert('login tidak sukses')
-        console.log(emailLogin)
-        console.log(passwordLogin)
-        focus;
-       return false;
+
+        LoginButton.style.display="none"
+        loadingProses .style.display="flex"
+        setTimeout (load,4000);
+        function load(){
+        
+            loadingProses .style.display="none"
+            LoginButton.style.display="flex"
+            load.break
+            focus;
+           return false;
+        }
+  
+   
+        
     }
     if (passwordLogin.value!=pascek) {
-        alert('login tak sukses')
-
-        focus;
-        return false;
+        LoginButton.style.display="none"
+        loadingProses .style.display="flex"
+        setTimeout (load,4000);
+        function load(){
+            alert('login tak sukses')
+            loadingProses .style.display="none"
+            LoginButton.style.display="flex"
+            load.break
+            focus;
+           return false;
+        }
     }
     else{
+        setTimeout (load,2000);
+        function load(){
+            LoginButton.style.display="none"
+            loadingProses .style.display="flex"
+        }
         alert('login sukses')
     }
 }
