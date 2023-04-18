@@ -16,15 +16,25 @@ let warningErr = document.getElementById('warningErr')
 let loginPage = "login.html"
 
 function submit() {
-
     localStorage.setItem("emailvalue",emailRegister.value)
     localStorage.setItem("passwordvalue",passwordRegister.value)
  
     if (name.value == "") {
-       warning.innerHTML="plis input your name"
-       warning.style.color="red";
-       focus;
-        return false;
+        register.style.display='block'
+        // loadingProses .style.display="flex"
+    
+        // setTimeout (load,4000);
+        // function load(){
+        //     alert(register)
+        //     loadingProses .style.display="none"
+        //     focus;
+        //      return false;
+
+        // }
+        warning.innerHTML="plis input your name"
+        warning.style.color="red";
+ 
+
 
     }
     if (email.value == "") {
@@ -66,19 +76,21 @@ let emailLogin = document.getElementById('emailLOgin')
 let passwordLogin = document.getElementById('passwordLogin')
 let LoginButton = document.getElementById('LoginButton')
 let loadingProses = document.getElementById('loadingProses')
+
+
 function Login() {
  let emailcek =  localStorage.getItem("emailvalue")
-   let pascek = localStorage.getItem("passwordvalue")
-    if (emailLogin.value!=emailcek) {
 
+   let pascek = localStorage.getItem("passwordvalue")
+    if (emailLogin.value!=emailcek || emailLogin=="") {
+  
         LoginButton.style.display="none"
         loadingProses .style.display="flex"
         setTimeout (load,4000);
         function load(){
-        
+            alert('email salah')
             loadingProses .style.display="none"
             LoginButton.style.display="flex"
-            load.break
             focus;
            return false;
         }
@@ -104,7 +116,8 @@ function Login() {
         function load(){
             LoginButton.style.display="none"
             loadingProses .style.display="flex"
+            alert('login sukses')
         }
-        alert('login sukses')
+
     }
 }

@@ -16,7 +16,7 @@ nav{
     width: 100vw;
     box-shadow:  0px 5px 10px #b3aeae;
 background: none;
-    height: 100px;
+    height: 90px;
     display: grid;
     grid-template-columns: 0.5fr 1fr  0.2fr;
     grid-template-rows: 80px;
@@ -27,9 +27,10 @@ background: none;
 }
 
 .logo{
-     color: linear-gradient(181.05deg, #17ACAC 0.9%, #000000 294.55%);
-    ;
-    font-size: 1.5em;
+    letter-spacing: 1px;
+    -webkit-text-fill-color: #12dbdb;
+    -webkit-text-stroke-color: #0ac7c7;
+    font-size: 1.4em;
     height: 100%;
     display: flex;
     justify-content: start;
@@ -55,16 +56,20 @@ ul{
     display: flex;
     justify-content:center;
     align-items: center; 
+   
 }
 .menu li a{
-   font-size: 1.2em;
+   font-size: 1em;
    font-weight: 600;
    transition: all 1s;
+
+   color: #000;
 }
 .menu li a:hover{
    font-size: 1em;
    font-weight: 600;
    transition: all 1s;
+   opacity: 0.5;
 }
 .buttonLoginAndRegis{
     display: flex;
@@ -72,7 +77,7 @@ ul{
     align-items: center; 
     height: 100%;
     gap: 5%;
-    padding: 2px;
+
 }
 .buttonLoginAndRegis button{
     width: 130px;
@@ -80,6 +85,10 @@ ul{
     border-radius: 8px;
     background: #12dbdb;
     box-shadow:  1px 10px 20px #08515e;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 1s;
+    color: #000;
 }
 .buttonLoginAndRegis button:hover{
     width: 130px;
@@ -112,13 +121,13 @@ ul{
   justify-content: center;
   align-items: center;
   flex-direction: column;  
-  width: 40px; height: 40px;
+  width: 30px; height: 30px;
   gap: 5px;
 }
 .cartshopping .burgerMenu span{
     background: #000;
     width: 90%;
-    height: 4px;
+    height: 3px;
 }
 .zeropage{
     width: 100%;
@@ -143,7 +152,7 @@ ul{
     align-items: center;
 }
 .zeropage .container .search input::placeholder{
-    font-size: 1em;
+    font-size: 0.9em;
     margin: 100px;
 }
 .zeropage .container .search input{
@@ -174,19 +183,24 @@ ul{
     justify-content: center;
     align-items: center;
 }
-.zeropage .container .visitpage button:hover{
+
+.zeropage .container .visitpage button{
+    width: 140px;
+    height: 40px;
+    border-radius: 8px;
     background: #12dbdb;
+    box-shadow:  1px 10px 20px #08515e;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: all 1s;
+    color: #000;
+
+}
+.zeropage .container .visitpage button:hover{
      opacity: 0.6;
      transition: all 0.5s;
 }
-.zeropage .container .visitpage button{
-    width: 190px;
-    height: 40px;
-    border-radius: 10px;
-    background: #1de2e2;
-    transition: all 0.5s;
 
-}
 .sponsor{
     width: 100%;
     height: 20vh;
@@ -195,28 +209,29 @@ ul{
     align-items: center;
 }
 .sponsorbox{
-    width: 90%;
+    width: 80%;
     height: 20vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 80%;
     grid-gap: 20px;
 
+
 }
 .sponsorbox .content{
     padding: 10px;
 }
 .sponsorbox .content .img{
-    width: 99% ;
+    width: 70% ;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .sponsorbox .content img{
-    width: 99% ;
-    height: 50%;
-    object-fit: contain;
+    width: auto ;
+    height: 25%;
+    object-fit:inherit;
 }
 .Popularcourses{
     width: 99%;
@@ -226,18 +241,15 @@ ul{
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
 }
 .Popularcourses .head{
-    width: 100%;
+    width: 80%;
     height: 10vh;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows:auto;
     grid-gap: 2%;
-    /* display: flex;
-    justify-content:space-evenly;
-    align-items:center; */
+    background: #dbcfcf;
 }
 .Popularcourses .head h2{
     font-size: 1.7em;
@@ -245,6 +257,7 @@ ul{
     letter-spacing: 2px;
     position: relative;
     top: 50%;
+    color: #178C8C;
 }
 .Popularcourses .head .list{
     display: flex;
@@ -268,21 +281,30 @@ ul{
  
 }
 .imagesDisplay{
-    width: 330px;
-    height: 490px;
+    width: 23%;
+    height: 510px;
     background: #F8F8F8;
     display: flex;
-
     box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 .imagesDisplay .img{
-    width: 100%;
+    width: 99%;
     background: #000;
     height:230px;
     position: relative;
+    padding: 5px;
+    margin: 5px auto;
+}
+.imagesDisplay .detailDescription{
+    width: 99%;
+    background: #a71515;
+    height:230px;
+    position: relative;
+    padding: 5px;
+    margin: 5px auto;
 }
 .starRating svg{
     width: 27px;
@@ -299,19 +321,19 @@ ul{
 }
 .imagesDisplay .namecourses .title p{
    font-size: 1.1em;
-   font-weight: 800;
+   font-weight: 600;
 }
 .imagesDisplay .namecourses .add{
-width: 40px;
-height: 40px;
+width: 30px;
+height: 30px;
 border-radius: 50%;
 display: flex;
 justify-content: center;
 align-items: center;
 }
 .imagesDisplay .namecourses .add svg{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     border-radius: 50%;
     background: #178C8C;
@@ -345,17 +367,26 @@ align-items: center;
 }
 .imagesDisplay .starandmerek .imgmerek img{
     position: absolute;
-    width: 200px;
-    height: 30px;
-    left: -60px;
- 
-  object-fit: contain;
+    width:auto;
+    height:20px;
+ position: absolute;
+ left: 10px;
+  object-fit: cover;
 }
 .starRating{
     display: flex;
     justify-content:center;
     align-items: start;
     gap: 5px;
+}
+.starRating svg{
+    width: 18px;
+}
+#buy {
+    width: 50%;
+    height: 30px;
+    border-radius: none;
+    font-size: 1em;
 }
 
 .imagesDisplay button{
@@ -373,12 +404,12 @@ align-items: center;
     color: #fff;
 }
 
-@media only screen and (max-width:1100px){
+@media only screen and (max-width:1000px){
     nav{
-        width: 100vw;
+        min-width: 100vw;
         box-shadow:  0px 5px 10px #b3aeae;
     background: none;
-        height: 100px;
+        height: 80px;
         display: grid;
         grid-template-columns: 0.5fr 1fr  0.2fr;
         grid-template-rows: 80px;
@@ -386,6 +417,7 @@ align-items: center;
         position:fixed;
         backdrop-filter: blur(7px);
         z-index: 100;
+        display: flex;
     }
     .menu{
         display: flex;
@@ -399,7 +431,7 @@ align-items: center;
         margin-right: auto;
         box-shadow:  1px 10px 20px #1b1a1a;
         transition: all 1s ;
-        transform: translateX(96%);
+        transform: translateX(150%);
         backdrop-filter: blur(7px);
     }
     .menuactive{
@@ -408,11 +440,11 @@ align-items: center;
         backdrop-filter: blur(7px);
     }
     ul{
-        display: flex;
         justify-content: center;
         align-items: center; 
         flex-direction: column;
         position: absolute;
+        display: flex;
 
     
     }
@@ -452,20 +484,21 @@ align-items: center;
         justify-content: center;
         align-items: center;
         flex-direction: column;  
-        width: 50px; height: 50px;
+         width: 40px;
+        height: 40px;
         margin-bottom: 20px;
         position: absolute;
-        right: 90px;
+        right: 50px;
     }
     .cartshopping .burgerMenu {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;  
-        width: 40px;
-         height: 40px;
+        width: 30px;
+         height: 30px;
         gap: 5px;
-        right: 10px;
+        right: 15px;
         position: absolute;
       }
     .logo{
@@ -489,15 +522,17 @@ align-items: center;
    .zeropage .container .search{
     width: 90%;
     height: 70px;
-    display:flex;
+    display: flex;
     padding: 5px;
     font-size: 0.7em;
     justify-content: center;
     align-items: center;
 }
 .zeropage .container .search input::placeholder{
-    font-size: 0.9em;
-    margin: 100px;
+    font-size: 0.8em;
+    width: 200px;
+    height: 20px;
+    margin-left: 10px auto;
 }
 .zeropage .container .search input{
     width: 90%;
@@ -561,29 +596,96 @@ flex-direction: column;
     flex-direction: column;
 }
 .detailprogram{
-    background: #F8F5F5;
-    width: 80vw;
-    height: auto;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    gap: 10px;
-    padding: 10px;
-    flex-direction: column;
-    position: relative;
- 
+   max-width: 99vw;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  background: #d11616;
+ flex-direction: column;
+  gap: 10px;
+  padding: 5px auto;
+  position: relative;
 }
 .imagesDisplay{
-    width: 80vw;
-    height: 490px;
-    background: #F8F8F8;
+    margin: 5px;
+    width: 90%;
+    height: 480px;
     display: flex;
-    overflow: auto;
-    overflow-y: auto;
-    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+   background: #F8F5F5;
+   gap: 5px;
+   overflow: hidden;
+   overflow-y: auto;
+   flex-direction: column;
 }
-    
+
+
+.imagesDisplay .img{
+    display: flex;
+    max-width: 90%;
+    height: 240px;
+    background: rgb(155, 155, 179);
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow:   5px 5px 5px #a26161;
+}
+.detailDescription{
+    justify-content: space-evenly;
+    align-items: start;
+    flex-direction: column;
+    display: flex;
+    min-width: 98%;
+    height: 240px;
+    margin: 10px auto;
+    padding: 5px;
+}
+.imagesDisplay .namecourses{
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+         width: fit-content;
+         margin-left: 5px;
+   }
+.namecourses .title {
+    font-size: 12px;
+    font-weight: 100;
+   }
+.imagesDisplay .namecourses .add svg{
+  width: 17px;
+  height: 17px;
+}
+.imagesDisplay .duration{
+    font-size: 13px;
+    font-weight: 500;
+}
+.imagesDisplay .price{
+    font-size: 18px;
+    font-weight: 700;
+}
+.starandmerek .imgmerek{
+    width: 80vw;
+    height: 30px;
+ margin-top: 5px;
+
+}
+.starandmerek .imgmerek img{
+    width: 200px;
+    height: 25px;
+    object-fit: cover;
+
+}
+.starRating{
+    max-width: 70%;
+    height: 30px;
+}
+.starRating svg{
+  max-width: 16px;
+}
+    #buy{
+        width: 80%;
+        height: 30px;
+    }
 }

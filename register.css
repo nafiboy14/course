@@ -51,7 +51,7 @@ align-items: center;
 .conteiner .pageRegister .pageInputREgister label{
  font-size: 1.2em;
  font-weight: 600;
- color: #0cf02a;
+ color: #07e3ca;
 }
 .conteiner .pageRegister .pageInputREgister input{
  font-size: 1.2em;
@@ -67,17 +67,69 @@ align-items: center;
   font-weight: 300;
 color: #0f3522;
 }
-.conteiner .pageRegister button{
+ #register{
     width: 190px;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     background: #1de2e2;
     transition: all 0.5s;
 }
+.registeractive{
+    display: none;
+}
+.conteiner .pageRegister  #loadingProses{
+    width: 190px;
+    height: 40px;
+    display: none;
+    border-radius: 10px;
+    background:none;
+    transition: all 0.5s;
+    justify-content: center;
+    align-items: center;
+ }
+ .lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 70px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #fff;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
 
 @media only screen and (max-width:1100px){
     .conteiner .pageRegister{
-        width: 90%;
+        width: 99%;
         height:80vh ;
         display: flex;
         justify-content: center;
@@ -86,12 +138,32 @@ color: #0f3522;
         gap: 50px;
     }
     .conteiner .pageRegister .pageInputREgister{
-        display: flex;
+        display: grid;
+        grid-template-columns: 0.2fr 1fr;
         justify-content:center;
         align-items: center;
-        width: 90%;
+        width: 100%;
         border: 1px solid white;
         height:80px ;
         gap: 20px;
     }
+    .conteiner .pageRegister .pageInputREgister label{
+        font-size: 0.9em;
+        font-weight: 600;
+        color: #07e3ca;
+       }
+    .conteiner .pageRegister .pageInputREgister input{
+        font-size: 0.9em;
+        width: 100%;
+          list-style-type: none;
+          height:40px;
+          border-radius: 10px;
+          border: 1px solid #000;
+          background: transparent;
+       }
+       .conteiner .pageRegister .pageInputREgister ::placeholder{
+        font-size: 0.9em;
+         font-weight: 300;
+       color: #0f3522;
+       }
 }
