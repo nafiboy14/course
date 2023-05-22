@@ -13,28 +13,28 @@ let password = document.getElementById('passwordRegister')
 let register = document.getElementById('register')
 let warning = document.getElementById('warning')
 let warningErr = document.getElementById('warningErr')
+let loadingProses = document.getElementById('loadingProses')
 let loginPage = "login.html"
-
+//register script//
 function submit() {
     localStorage.setItem("emailvalue",emailRegister.value)
     localStorage.setItem("passwordvalue",passwordRegister.value)
  
     if (name.value == "") {
-        register.style.display='block'
-        // loadingProses .style.display="flex"
-    
-        // setTimeout (load,4000);
-        // function load(){
-        //     alert(register)
-        //     loadingProses .style.display="none"
-        //     focus;
-        //      return false;
-
-        // }
+        // register[0].classList.add('registeractive')
+        loadingProses .style.display="flex"
+        setTimeout (load,1000);
+        function load(){
+          register.style.display='block'
         warning.innerHTML="plis input your name"
-        warning.style.color="red";
- 
-
+         warning.style.color="red";
+            loadingProses .style.display="none"
+            register.style.display="flex"
+            console.log(register)
+            focus;
+           return false;
+        }
+  
 
     }
     if (email.value == "") {
@@ -54,7 +54,7 @@ function submit() {
 
 
     }
-    if (password.value.length <= 8) {
+    if (password.value.length <= 7) {
         warning.innerHTML="minimal password is 8 carakter"
         warning.style.color="red";
         focus;
@@ -69,13 +69,13 @@ function submit() {
     }
 }
 
-
+//====//
 
 let nameLOgin = document.getElementById('nameLogin')
 let emailLogin = document.getElementById('emailLOgin')
 let passwordLogin = document.getElementById('passwordLogin')
 let LoginButton = document.getElementById('LoginButton')
-let loadingProses = document.getElementById('loadingProses')
+
 
 
 function Login() {
@@ -83,12 +83,13 @@ function Login() {
 
    let pascek = localStorage.getItem("passwordvalue")
     if (emailLogin.value!=emailcek || emailLogin=="") {
-  
+
         LoginButton.style.display="none"
         loadingProses .style.display="flex"
-        setTimeout (load,4000);
+        setTimeout (load,1000);
         function load(){
-            alert('email salah')
+            warning.innerHTML='email salah'
+            warning.style.color='red'
             loadingProses .style.display="none"
             LoginButton.style.display="flex"
             focus;
@@ -101,9 +102,10 @@ function Login() {
     if (passwordLogin.value!=pascek) {
         LoginButton.style.display="none"
         loadingProses .style.display="flex"
-        setTimeout (load,4000);
+        setTimeout (load,1000);
         function load(){
-            alert('login tak sukses')
+            warning.innerHTML='pasword salah'
+            warning.style.color='red'
             loadingProses .style.display="none"
             LoginButton.style.display="flex"
             load.break
@@ -113,10 +115,12 @@ function Login() {
     }
     else{
         setTimeout (load,2000);
+        LoginButton.style.display="none"
+        loadingProses .style.display="flex"
         function load(){
-            LoginButton.style.display="none"
-            loadingProses .style.display="flex"
-            alert('login sukses')
+            warning.innerHTML='login berhasil'
+            warning.style.color='red'
+            loadingProses .style.display="none"
         }
 
     }
